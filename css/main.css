@@ -1335,6 +1335,7 @@ header {
   .project-box:hover .image {
     background-color: #e6e6e6; }
   .project-box .image {
+    margin-bottom: 10px;
     width: 200px;
     height: 100px;
     background-color: #ddd;
