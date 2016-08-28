@@ -5,8 +5,8 @@
 html,
 body {
   font-size: 14px;
-  height: 100%; 
-  background-color: #e6e6e6;
+  height: 100%;
+  background-color: #f1f1f1;
   color: #5d5d5d;
   font-family: "Helvetica Neue", Calibri, sans-serif; }
 
@@ -30,7 +30,7 @@ textarea {
 @media screen and (min-width: 640px) {
   body,
   html {
-    font-size: 20px; } 
+    font-size: 20px; }
   .resume-img {
     width: 75%;
     height: 45%; } }
@@ -38,7 +38,7 @@ textarea {
 @media screen and (max-width: 640px) {
   body,
   html {
-    font-size: 16px; } 
+    font-size: 16px; }
   .resume-img {
     margin-left: -15px !important; } }
 
@@ -46,7 +46,7 @@ textarea {
   position: fixed;
   top: 0px;
   left: 0px;
-  height: 20px; 
+  height: 20px;
   font-size: 14px;
   width:100%; }
 
@@ -58,7 +58,7 @@ textarea {
   display: inline-block;
   font-weight: 400;
   font-size: 0.8em;
-  color: #5d5d5d; 
+  color: #5d5d5d;
   text-transform: none !important;
 }
 
@@ -92,35 +92,35 @@ textarea {
   opacity: 0.7;
 }
 
-div.tooltip {   
-  position: absolute;           
-  text-align: center;           
-  padding: 2px;             
-  background: #e6e6e6;
-  border: 1px solid #535353;      
-  pointer-events: none;    
-  font-size: 10px;     
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 2px;
+  background: #f1f1f1;
+  border: 1px solid #535353;
+  pointer-events: none;
+  font-size: 10px;
 }
 
 .maptip {
-  font-size: 10px;        
+  font-size: 10px;
   font-weight: bold;
 }
 
 .livetip {
-  font-size: 8px !important;        
+  font-size: 8px !important;
 }
 
 .timeline-circle {
   stroke-width: 5px;
-  stroke: #e6e6e6;
+  stroke: #f1f1f1;
   opacity: 0.9;
 }
 
 .country-rect {
   opacity: 0.6;
   stroke-width: 2.5px;
-  stroke: #e6e6e6;
+  stroke: #f1f1f1;
   fill: #456990;
 }
 
