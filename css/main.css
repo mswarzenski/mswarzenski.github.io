@@ -6,11 +6,8 @@
  */
 html {
   font-family: Helvetica Neue, sans-serif;
-  /* 1 */
   -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  -webkit-text-size-adjust: 100%; }
 
 /**
  * Remove default margin.
@@ -1163,29 +1160,6 @@ th {
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1; } }
-@font-face {
-  font-family: 'CircularStd';
-  src: url("/assets/fonts/circular/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/circular/CircularStd-Book.otf") format("opentype"), url("/assets/fonts/circular/CircularStd-Book.woff") format("woff"), url("/assets/fonts/circular/CircularStd-Book.ttf") format("truetype"), url("/assets/fonts/circular/CircularStd-Book.svg#CircularStd-Book") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'CircularStd';
-  src: url("/assets/fonts/circular/CircularStd-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/circular/CircularStd-Medium.otf") format("opentype"), url("/assets/fonts/circular/CircularStd-Medium.woff") format("woff"), url("/assets/fonts/circular/CircularStd-Medium.ttf") format("truetype"), url("/assets/fonts/circular/CircularStd-Medium.svg#CircularStd-Medium") format("svg");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'CircularStd';
-  src: url("/assets/fonts/circular/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/circular/CircularStd-Bold.otf") format("opentype"), url("/assets/fonts/circular/CircularStd-Bold.woff") format("woff"), url("/assets/fonts/circular/CircularStd-Bold.ttf") format("truetype"), url("/assets/fonts/circular/CircularStd-Bold.svg#CircularStd-Bold") format("svg");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'CircularStd';
-  src: url("/assets/fonts/circular/CircularStd-Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/circular/CircularStd-Black.otf") format("opentype"), url("/assets/fonts/circular/CircularStd-Black.woff") format("woff"), url("/assets/fonts/circular/CircularStd-Black.ttf") format("truetype"), url("/assets/fonts/circular/CircularStd-Black.svg#CircularStd-Black") format("svg");
-  font-weight: 900;
-  font-style: normal; }
 
 html {
   font-size: 16px; }
