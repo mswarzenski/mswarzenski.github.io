@@ -23,7 +23,7 @@ var colors = d3.scale.ordinal()
 	.domain(legendcat)
 	.range(["#F45B69", "#456990", "#535353"])
 var colors2 = d3.scale.ordinal()
-	.range(["#114B5F", "#028090", "#67ECAD", "#456990", "#F45B69"]);
+	.range(["#114B5F", "#028090", "#f3d411", "#456990", "#F45B69"]);
 
 var timelinexScale = d3.scale.linear()
 		.domain([0,12])
