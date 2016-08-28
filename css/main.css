@@ -1182,10 +1182,10 @@ html, html a {
   background-color: white; }
 
 ::-moz-selection {
-  background-color: #5D5D5D; }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 body {
-  color: #5d5d5d;
+  color: rgba(0, 0, 0, 0.5);
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 500;
   background-color: #f1f1f1;
@@ -1204,7 +1204,7 @@ body {
 a {
   padding-left: 15px;
   padding-right: 15px;
-  color: #5d5d5d;
+  color: rgba(0, 0, 0, 0.5);
   transition: all .2s ease;
   position: relative;
   text-decoration: none;
@@ -1305,7 +1305,7 @@ header {
     transition: all .2s ease; }
   .project-box:hover .title {
     opacity: 1;
-    color: #5d5d5d; }
+    color: rgba(0, 0, 0, 0.5); }
   .project-box:hover .image {
     background-color: #f1f1f1; }
   .project-box .image {
@@ -1313,7 +1313,7 @@ header {
     width: 200px;
     height: 200px;
     background-color: #ddd;
-    border: 1px solid #5d5d5d;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -1341,14 +1341,14 @@ header {
         transition: all .2s ease; }
       .book-box:hover .title {
         opacity: 1;
-        color: #5d5d5d; }
+        color: rgba(0, 0, 0, 0.5); }
       .book-box:hover .image {
         background-color: #f1f1f1; }
       .book-box .image {
         width: 80px;
         height: 110px;
         background-color: #ddd;
-        border: 1px solid #5d5d5d;
+        border: 1px solid rgba(0, 0, 0, 0.5);
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;

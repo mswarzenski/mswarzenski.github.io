@@ -14,8 +14,8 @@ var path = d3.geo.path()
     .projection(projection);
 
 var tip = d3.select("body")
-	.append("div")   
-	.attr("class", "tooltip")               
+	.append("div")
+	.attr("class", "tooltip")
 		.style("opacity", 0);
 
 /* scales */
@@ -23,7 +23,7 @@ var colors = d3.scale.ordinal()
 	.domain(legendcat)
 	.range(["#F45B69", "#456990", "#535353"])
 var colors2 = d3.scale.ordinal()
-	.range(["#114B5F", "#028090", "#E4FDE1", "#456990", "#F45B69"]);
+	.range(["#114B5F", "#028090", "#67ECAD", "#456990", "#F45B69"]);
 
 var timelinexScale = d3.scale.linear()
 		.domain([0,12])
@@ -58,7 +58,7 @@ var map = d3.select("#map")
 
 var timeline = d3.select("#timeline")
 	.append("div")
-	.attr("class", "timeline"); 
+	.attr("class", "timeline");
 
 var countries = d3.select("#countries")
 	.append("div")
@@ -115,7 +115,7 @@ d3.csv("data/states.csv", function(error, data) { //places lived
                 .style("fill", function(d) { return (d.properties.lived==1) ? "#F45B69" : (d.properties.visited==1) ? "#456990" : "#535353"; })
                 .classed("hover-state", function(d) { return (d.properties.visited==1) ? true : false; })
                 .on("mouseover", mapmouseover)
-                .on("mouseout", mouseout); 
+                .on("mouseout", mouseout);
     });
 
     var legend = mapsvg.selectAll("g")
@@ -147,7 +147,7 @@ d3.csv("data/timeline.csv", function(error, data) { //states visited
 
     colors2.domain(["San Francisco", "Annapolis", "St. Louis", "Auckland", "Baton Rouge"]);
 
-    timelinesvg.append("g") 
+    timelinesvg.append("g")
         .attr("class", "y axis")
         .attr("transform", "translate(0,0)")
         .call(timelineyAxis)
@@ -217,35 +217,35 @@ d3.csv("data/countries.csv", function(error, data) {
 /*------ HELPER FUNCTIONS ---------*/
 function mapmouseover(d) {
 	tip.classed("maptip", true);
-	tip.transition()        
-	    .style("opacity", 0.9);      
+	tip.transition()
+	    .style("opacity", 0.9);
 	tip.html(d.properties.abbr)
-	    .style("left", (d3.event.pageX) + "px")     
-	    .style("top", (d3.event.pageY - 15) + "px");    
+	    .style("left", (d3.event.pageX) + "px")
+	    .style("top", (d3.event.pageY - 15) + "px");
 }
 
 function livemouseover(d) {
 	tip.classed("livetip", true);
-	tip.transition()        
-		.style("opacity", 0.9);      
+	tip.transition()
+		.style("opacity", 0.9);
 	tip.html("<b>" + d.monthtext + " " + d.year + "</b></br>" + d.city + ", " + d.state)
-	    .style("left", (d3.event.pageX) + "px")     
-	    .style("top", (d3.event.pageY - 15) + "px");    
+	    .style("left", (d3.event.pageX) + "px")
+	    .style("top", (d3.event.pageY - 15) + "px");
 }
 
 function countrymouseover(d) {
 	countriessvg.selectAll("#selected-text")
-	    .text(d.name);   
+	    .text(d.name);
 }
 
 function mouseout(d) {
-	tip.transition()      
-		.duration(0)  
-		.style("opacity", 0);   
+	tip.transition()
+		.duration(0)
+		.style("opacity", 0);
 	tip.attr("class", "tooltip");
 
 	countriessvg.selectAll("#selected-text")
-	    .text("");   
+	    .text("");
 }
 
 
