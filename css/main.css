@@ -1212,9 +1212,9 @@ html, html a {
 
 body {
   color: #5d5d5d;
-  font-family: 'CircularStd', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 500;
-  background-color: #e6e6e6;
+  background-color: #f1f1f1;
   -webkit-animation: badyfade 1s ease;
   animation: badyfade 1s ease;
   overflow-x: hidden; }
@@ -1233,21 +1233,21 @@ a {
   color: #5d5d5d;
   transition: all .2s ease;
   position: relative;
-  text-decoration: none; 
+  text-decoration: none;
   text-transform: lowercase }
   a:hover {
     text-decoration: underline; }
 
 img {
   vertical-align: middle;
-  width: 100%; 
+  width: 100%;
   height: 100%;}
 
 img:hover {
   opacity: 0.5; }
 
 p {
-  line-height: 1.4; 
+  line-height: 1.4;
   margin-bottom: 1em;
   font-weight: 400;}
 
@@ -1280,7 +1280,7 @@ header {
 .section {
   max-width: 1280px;
   padding-bottom: 7.5rem;
-  padding-top: 6rem; 
+  padding-top: 6rem;
   margin-left: auto;
   margin-right: auto; }
   @media screen and (min-width: 700px) {
@@ -1301,12 +1301,12 @@ header {
   height: 100%; }
 
 .img-title {
-  font-weight: normal; 
+  font-weight: normal;
   font-size: 16px; }
 
 .img-subtitle {
-  font-weight: normal; 
-  font-size: 12px; 
+  font-weight: normal;
+  font-size: 12px;
   margin-top: 3px;}
 
 .book-title {
@@ -1333,7 +1333,7 @@ header {
     opacity: 1;
     color: #5d5d5d; }
   .project-box:hover .image {
-    background-color: #e6e6e6; }
+    background-color: #f1f1f1; }
   .project-box .image {
     margin-bottom: 10px;
     width: 200px;
@@ -1369,7 +1369,7 @@ header {
         opacity: 1;
         color: #5d5d5d; }
       .book-box:hover .image {
-        background-color: #e6e6e6; }
+        background-color: #f1f1f1; }
       .book-box .image {
         width: 80px;
         height: 110px;
@@ -1384,7 +1384,7 @@ header {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        transition: all .2s ease; }    
+        transition: all .2s ease; }
 
 footer {
   opacity: .6; }
