@@ -254,7 +254,8 @@ function countrymouseover(d) {
   d3.select(this).style("fill", "rgb(244, 91, 105)");
 
   if (d.name == "New Zealand") {
-    d3.select(this).style("fill", "rgb(217, 236, 208)");
+    countriessvg.selectAll("#link-text")
+        .text("Click me!");
   }
 }
 
