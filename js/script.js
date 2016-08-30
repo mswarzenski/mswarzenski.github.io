@@ -257,9 +257,18 @@ function countrymouseover(d) {
 
     d3.select(this).style("fill", "rgb(183, 215, 232)");
   } else {
-    if (d.year == "2014") {
+    if (d.year == "2014" & d.name != "USA") {
       countriessvg.selectAll("#link-text")
           .text("The post graduation Europe trip...");
+    } else if (d.name == "Switzerland") {
+      countriessvg.selectAll("#link-text")
+          .text("The fatherland!");
+    } else if (d.name == "Germany") {
+      countriessvg.selectAll("#link-text")
+          .text("The fatherland!");
+    } else if (d.name == "China") {
+      countriessvg.selectAll("#link-text")
+          .text("The motherland!");
     }
     d3.select(this).style("fill", "rgb(244, 91, 105)");
   }
