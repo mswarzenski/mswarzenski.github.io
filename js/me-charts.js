@@ -23,8 +23,10 @@ var colors = d3.scale.ordinal()
 	.domain(legendcat)
 	.range(["#F45B69", "#456990", "#535353"])
 var colors2 = d3.scale.ordinal()
-	.range(["#114B5F", "#028090", "#fbe50d", "#456990", "#F45B69"]);
+	.range(["#e0a4a4", "#b37f7f", "#d9ecd0", "#77a8a8", "#b7d7e8"]);
+  // .range(["#456990", "#F45B69", "#f2ae72", "#c94c4c", "#b7d7e8"]);
 
+//pink, green, red, orange, dark blue
 var timelinexScale = d3.scale.linear()
 		.domain([0,12])
 	    .range([0,w]);
@@ -33,7 +35,7 @@ var timelineyScale = d3.scale.linear()
 	    .range([h,0]);
 
 var countriesxScale = d3.scale.ordinal()
-		.rangeRoundBands([0, w], 0.01);
+		.rangeRoundBands([0, w + margin.left], 0.01);
 var countriesyScale = d3.scale.linear()
 		.rangeRound([h, 0]);
 
@@ -171,7 +173,7 @@ d3.csv("data/countries.csv", function(error, data) {
 
 	data.forEach(function(d) {
 	  var y0 = 0;
-	  d.countries = colors2.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+	  d.countries = colors2.domain().map(function(name) { return {name: name, year: d["year"], y0: y0, y1: y0 += +d[name]}; });
 	  d.total = d.countries[d.countries.length - 1].y1;
 	});
 
@@ -222,6 +224,8 @@ function mapmouseover(d) {
 	tip.html(d.properties.abbr)
 	    .style("left", (d3.event.pageX) + "px")
 	    .style("top", (d3.event.pageY - 15) + "px");
+
+  d3.select(this).style("fill-opacity", "0.2")
 }
 
 function livemouseover(d) {
@@ -229,13 +233,19 @@ function livemouseover(d) {
 	tip.transition()
 		.style("opacity", 0.9);
 	tip.html("<b>" + d.monthtext + " " + d.year + "</b></br>" + d.city + ", " + d.state)
-	    .style("left", (d3.event.pageX) + "px")
+	    .style("left", (d3.event.pageX + 15) + "px")
 	    .style("top", (d3.event.pageY - 15) + "px");
+
+
+  d3.select(this).attr("r", 7);
+
 }
 
 function countrymouseover(d) {
 	countriessvg.selectAll("#selected-text")
-	    .text(d.name);
+	    .text(d.year + ": " + d.name);
+
+  d3.select(this).style("fill", "rgb(244, 91, 105)");
 }
 
 function mouseout(d) {
@@ -244,8 +254,14 @@ function mouseout(d) {
 		.style("opacity", 0);
 	tip.attr("class", "tooltip");
 
+  d3.select(this).style("fill-opacity", null);
+
 	countriessvg.selectAll("#selected-text")
 	    .text("");
+
+  d3.selectAll(".country-rect").style("fill", null);
+  d3.selectAll(".timeline-circle").attr("r", 5);
+
 }
 
 
