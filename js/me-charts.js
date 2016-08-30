@@ -282,7 +282,7 @@ function click(d) {
   if (d.name == "New Zealand") {
     window.open(
       "https://nzmarie.wordpress.com/",
-      '_blank',
+      '_blank'
     );
   }
 }
