@@ -189,12 +189,12 @@ d3.csv("data/countries.csv", function(error, data) {
 	     .attr("transform", "rotate(90)")
 	     .style("text-anchor", "start");
 
-	countriessvg.append("text") //large month label
+	countriessvg.append("text")
 	    .attr("id", "selected-text")
 	    .attr("transform", "translate(10,40)")
 	        .text("");
 
-  countriessvg.append("text") //large month label
+  countriessvg.append("text")
       .attr("id", "link-text")
       .attr("transform", "translate(10,55)")
           .text("");
@@ -251,11 +251,13 @@ function countrymouseover(d) {
 	countriessvg.selectAll("#selected-text")
 	    .text(d.year + ": " + d.name);
 
-  d3.select(this).style("fill", "rgb(244, 91, 105)");
-
   if (d.name == "New Zealand") {
     countriessvg.selectAll("#link-text")
         .text("Click me!");
+
+    d3.select(this).style("fill", "rgb(183, 215, 232)");
+  } else {
+    d3.select(this).style("fill", "rgb(244, 91, 105)");
   }
 }
 
@@ -278,7 +280,6 @@ function mouseout(d) {
 }
 
 function click(d) {
-  console.log(d.name)
   if (d.name == "New Zealand") {
     window.open(
       "https://nzmarie.wordpress.com/",
