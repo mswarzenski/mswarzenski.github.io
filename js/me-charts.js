@@ -254,7 +254,7 @@ function countrymouseover(d) {
   d3.select(this).style("fill", "rgb(244, 91, 105)");
 
   if (d.name == "New Zealand") {
-    d3.select(this).style("fill", "#d9ecd0");
+    d3.select(this).style("fill", "rgb(244, 91, 105)");
   }
 }
 
@@ -281,7 +281,7 @@ function click(d) {
   if (d.name == "New Zealand") {
     window.open(
       "https://nzmarie.wordpress.com/",
-      '_blank'
+      '_blank',
     );
   }
 }
