@@ -97,18 +97,16 @@ div.tooltip {
   text-align: center;
   padding: 2px;
   background: #f1f1f1;
-  border: 1px solid #535353;
+  border-radius: 2px;
   pointer-events: none;
-  font-size: 10px;
 }
 
 .maptip {
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 9px !important;
 }
 
 .livetip {
-  font-size: 8px !important;
+  font-size: 9px !important;
 }
 
 .timeline-circle {
@@ -127,6 +125,11 @@ div.tooltip {
 #selected-text {
     font-size: 18px;
     font-weight: bold;
+    opacity: 0.4;
+}
+
+#link-text {
+    font-size: 12px;
     opacity: 0.4;
 }
 

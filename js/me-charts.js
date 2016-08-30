@@ -24,9 +24,7 @@ var colors = d3.scale.ordinal()
 	.range(["#F45B69", "#456990", "#535353"])
 var colors2 = d3.scale.ordinal()
 	.range(["#e0a4a4", "#b37f7f", "#d9ecd0", "#77a8a8", "#b7d7e8"]);
-  // .range(["#456990", "#F45B69", "#f2ae72", "#c94c4c", "#b7d7e8"]);
 
-//pink, green, red, orange, dark blue
 var timelinexScale = d3.scale.linear()
 		.domain([0,12])
 	    .range([0,w]);
@@ -196,6 +194,11 @@ d3.csv("data/countries.csv", function(error, data) {
 	    .attr("transform", "translate(10,40)")
 	        .text("");
 
+  countriessvg.append("text") //large month label
+      .attr("id", "link-text")
+      .attr("transform", "translate(10,55)")
+          .text("");
+
 	var year = countriessvg.selectAll(".year")
 		.data(data)
 		.enter().append("g")
@@ -209,8 +212,10 @@ d3.csv("data/countries.csv", function(error, data) {
 			.attr("y", function(d) { return countriesyScale(d.y1); })
 			.attr("width", countriesxScale.rangeBand())
 			.attr("height", function(d) { return countriesyScale(d.y0) - countriesyScale(d.y1); })
+      .style("cursor", function(d) { return (d.name == "New Zealand") ? "pointer" : "default"; })
 			.on("mouseover", countrymouseover)
-			.on("mouseout", mouseout);
+			.on("mouseout", mouseout)
+      .on("click", click);
 
 
 });
@@ -221,7 +226,7 @@ function mapmouseover(d) {
 	tip.classed("maptip", true);
 	tip.transition()
 	    .style("opacity", 0.9);
-	tip.html(d.properties.abbr)
+	tip.html(d.properties.name)
 	    .style("left", (d3.event.pageX) + "px")
 	    .style("top", (d3.event.pageY - 15) + "px");
 
@@ -237,6 +242,7 @@ function livemouseover(d) {
 	    .style("top", (d3.event.pageY - 15) + "px");
 
 
+
   d3.select(this).attr("r", 7);
 
 }
@@ -246,6 +252,11 @@ function countrymouseover(d) {
 	    .text(d.year + ": " + d.name);
 
   d3.select(this).style("fill", "rgb(244, 91, 105)");
+
+  if (d.name == "New Zealand") {
+    countriessvg.selectAll("#link-text")
+        .text("Click me!");
+  }
 }
 
 function mouseout(d) {
@@ -258,10 +269,22 @@ function mouseout(d) {
 
 	countriessvg.selectAll("#selected-text")
 	    .text("");
+  countriessvg.selectAll("#link-text")
+      .text("");
 
   d3.selectAll(".country-rect").style("fill", null);
   d3.selectAll(".timeline-circle").attr("r", 5);
 
+}
+
+function click(d) {
+  console.log(d.name)
+  if (d.name == "New Zealand") {
+    window.open(
+      "https://nzmarie.wordpress.com/",
+      '_blank' // <- This is what makes it open in a new window.
+    );
+  }
 }
 
 
