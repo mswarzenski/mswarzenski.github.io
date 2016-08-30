@@ -257,6 +257,10 @@ function countrymouseover(d) {
 
     d3.select(this).style("fill", "rgb(183, 215, 232)");
   } else {
+    if (d.year == "2014") {
+      countriessvg.selectAll("#link-text")
+          .text("The post graduation Europe trip...");
+    }
     d3.select(this).style("fill", "rgb(244, 91, 105)");
   }
 }
