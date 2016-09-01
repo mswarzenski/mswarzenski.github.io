@@ -248,8 +248,10 @@ function livemouseover(d) {
 }
 
 function countrymouseover(d) {
-	countriessvg.selectAll("#selected-text")
-	    .text(d.year + ": " + d.name);
+  if (d3.select(this).attr("height") != "0") {
+	  countriessvg.selectAll("#selected-text")
+	     .text(d.year + ": " + d.name);
+  }
 
   if (d.name == "New Zealand") {
     countriessvg.selectAll("#link-text")
