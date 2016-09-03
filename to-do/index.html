@@ -1,0 +1,70 @@
+---
+layout: default
+title: to-do
+---
+
+<style>
+    li {
+        line-height: 35px;
+        font-weight: normal;
+    }
+
+    .done {
+        text-decoration: line-through
+    }
+
+    a#list-link {
+        padding: 0px;
+    }
+
+    @media screen and (min-width: 640px)
+    body, html {
+        font-size: 20px;
+    }
+    html, body {
+        font-size: 14px;
+        height: 100%;
+        background-color: #f1f1f1;
+        color: rgba(0, 0, 0, 0.5);
+        font-family: "Helvetica Neue", Calibri, sans-serif;
+    }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83622182-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<section id="about" class="section full-height">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="summary">a list of small project ideas/fixes i want to get to -</h2>
+        <h4 style="padding: 0px">to hold me accountable!</h4>
+        <br>
+        <ul class="subtitle>">
+            <li class="done">fix overlap on "countries" chart !!!</li>
+            <li class="done">goal difference on premier league match days by team</li>
+            <li>a tabuar interface for the billionare dataset, and small multiples of simple stats per year</li>
+            <li>something olympics</li>
+            <li>finish the instagram likes per hour scatterplot!</li>
+            <li class="done">design a logo for myself</li>
+            <a id="list-link" href="https://www.kaggle.com/nappon/d/hugomathien/soccer/the-fans-stay-loyal-the-players-move-on"><li>this, but interactive</li></a>
+            <li>dig into USDOT data
+                <ul class="nested">
+                    <a id="list-link" href="https://www.whitehouse.gov/blog/2016/08/29/2015-traffic-fatalities-data-has-just-been-released-call-action-download-and-analyze" target="_blank" rel="noopener noreferrer">
+                    <li>https://www.whitehouse.gov/blog/</li>
+                    </a>
+                </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+</section>
+

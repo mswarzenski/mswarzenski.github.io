@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" href="img/favicon.ico?v=2">
+
+    <meta property="name" content="Marie Swarzenski"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/stackicons/css/stackicons-social-minimal.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+    {% include google-analytics.html %}
+
+  </head>
+
+
+  <body>
+    <div id="header">
+      <div id="nav">
+        <a href="https://mswarzenski.github.io/#about">About</a>
+        <a href="https://mswarzenski.github.io/#me">Me</a>
+        <a href="https://mswarzenski.github.io/#projects">Projects</a>
+        <a href="https://mswarzenski.github.io/#contact">Contact</a>
+      </div>
+    </div>
+
+    <div id="page-wrap" class="container-fluid full-height">
+
+      {{ content }}
+
+    </div>
+  </body>
+
+</html>
