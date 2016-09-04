@@ -36,6 +36,8 @@ title: epl-goal-differential
   }
 </style>
 
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -61,7 +63,7 @@ title: epl-goal-differential
         var colors, teams, weeks, ranks;
         var factor;
 
-        d3.csv('data/s1516.csv', init); //load data, then initialize chart
+        d3.csv('gdata/s1516.csv', init); //load data, then initialize chart
 
         function init(_data) {
           _data.forEach (function(d) {
@@ -262,7 +264,7 @@ title: epl-goal-differential
 
       })(window,d3);
 
-      window.addEventListener('resize', function(x) { console.log("hi"); Chart.render; });
+      window.addEventListener('resize', function(x) { Chart.render; });
 
     </script>
 </section>
