@@ -122,13 +122,29 @@ title: Marie Swarzenski
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript">
-  $("a[href^='#']").on("click", function(e) {
-    e.preventDefault();
-    var offset = $("#header").height();
+  // $("a[href^='#']").on("click", function(e) {
+  //   e.preventDefault();
+  //   var offset = $("#header").height();
 
-    return $("html, body").animate({
-      scrollTop: $(this.hash).offset().top - offset
-    }, 300);
+  //   return $("html, body").animate({
+  //     scrollTop: $(this.hash).offset().top - offset
+  //   }, 300);
+  // });
+
+  $(document).ready(function(){
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+        var offset = $("#header").height();
+        var target = this.hash;
+
+        $('html, body').stop().animate({
+            'scrollTop': $(target).offset().top - offset
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
   });
 </script>
+
+
 
