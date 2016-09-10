@@ -57,7 +57,7 @@ var Note = React.createClass({
 var Board = React.createClass({
   getInitialState: function() {
     return {
-      notes: [{id: 0, note: "i can't do line breaks at the point in time...working on it 😬 🤓 🙈"}]
+      notes: [{id: 0, note: "i can't do line breaks at this point in time...working on it 😬 🤓 🙈"}]
     };
   },
 
