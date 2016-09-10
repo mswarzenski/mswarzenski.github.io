@@ -1,4 +1,4 @@
-
+// NOTE
 var Note = React.createClass({
   getInitialState: function() {
       return {editing: false}
@@ -24,12 +24,15 @@ var Note = React.createClass({
     this.props.onChange(ReactDOM.findDOMNode(this.refs.newText).value, this.props.index)
     this.setState({editing: false});
   },
+
   remove: function() {
     this.props.onRemove(this.props.index);
   },
+
   randomBetween: function(a,b) {
     return (a + Math.ceil(Math.random() * b));
   },
+
   renderDisplay: function() {
     return (
       <div className="note" style={this.style}>
@@ -41,6 +44,7 @@ var Note = React.createClass({
       </div>
     );
   },
+
   renderForm: function() {
     return (
       <div className="note" style={this.style}>
@@ -49,15 +53,18 @@ var Note = React.createClass({
       </div>
     );
   },
+
   render: function() {
    return this.state.editing ? this.renderForm() : this.renderDisplay();
   }
 });
 
+// BOARD
+
 var Board = React.createClass({
   getInitialState: function() {
     return {
-      notes: [{id: 0, note: "i can't do line breaks at this point in time...working on it 😬 🤓 🙈"}]
+      notes: [{id: 0, note: "I can't do line breaks at this point in time...working on it 😬 🤓 🙈"}]
     };
   },
 
@@ -107,7 +114,6 @@ var Board = React.createClass({
       </div>
     );
   }
-
 });
 
 

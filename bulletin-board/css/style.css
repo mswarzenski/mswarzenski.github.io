@@ -2,7 +2,7 @@ div.board,
 div#react-container {
     height: 100%;
     overflow: hidden;
-    font-family: Inconsolata;
+    font-family: Inconsolata, Consolas;
     font-size: 12px;
     color: #333;
 }
