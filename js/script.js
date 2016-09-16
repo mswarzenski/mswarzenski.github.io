@@ -261,7 +261,7 @@ function countrymouseover(d) {
   } else {
     if (d.year == "2014" & d.name != "USA") {
       countriessvg.selectAll("#link-text")
-          .text("The post graduation Europe trip...");
+          .text("Post graduation Europe trip :)");
     } else if (d.name == "Switzerland") {
       countriessvg.selectAll("#link-text")
           .text("The fatherland!");
