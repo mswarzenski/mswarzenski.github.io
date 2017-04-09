@@ -23,13 +23,13 @@ var colors = d3.scale.ordinal()
 	.domain(legendcat)
 	.range(["#F45B69", "#456990", "#535353"])
 var colors2 = d3.scale.ordinal()
-	.range(["#e0a4a4", "#b37f7f", "#d9ecd0", "#77a8a8", "#b7d7e8"]);
+	.range(["#e0a4a4", "#b37f7f", "#d9ecd0", "#77a8a8", "#b7d7e8", "#15323C"]);
 
 var timelinexScale = d3.scale.linear()
 		.domain([0,12])
 	    .range([0,w]);
 var timelineyScale = d3.scale.linear()
-		.domain([2016, 1992])
+		.domain([2017, 1992])
 	    .range([h,0]);
 
 var countriesxScale = d3.scale.ordinal()
